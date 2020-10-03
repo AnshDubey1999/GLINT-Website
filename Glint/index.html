@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head style="background-color:black">
+	<meta charset="utf-8">
+	<title>GLINT</title>
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body style="/*background-color:black;*/background-image: url('wallpaper.jpg');">
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand" href="index.html" style="color:red;font-size:60px;font-family:Candara;">GLINT</a> -->
+			<a class="navbar-brand" href="index.html">
+				<img src="Logo.png" alt="GLINT" height="65" width="200">
+			</a>
+			</div>
+			<form class="form-inline my-2 my-lg-0" id="searchForm">
+      			<input class="form-control mr-sm-2" type="text" id="searchText" placeholder="Search" aria-label="Search">
+      			<button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+    		</form>
+		</div>
+	</nav>
+	<div class="container">
+		<h5 style="color:grey;font-family:Courier;">New Releases</h5>
+		<hr style="color: grey">
+    	<!-- <div class="jumbotron">
+	    	<h3 class="text-center">Search For Any Movie</h3>
+	    	<form id="searchForm">
+	    		<input type="text" class="form-control" id="searchText" placeholder="Search Movies...">
+	    	</form>
+	    </div> -->
+    </div>
+
+    <div class="container">
+      <div id="movies" class="row">	
+      </div>
+      </div>
+
+      <div class="container">
+      <h5 style="color:grey;font-family:Courier;border-left:100px">Expiring soon</h5></div>
+		<hr style="color: grey">
+
+      <div class="container">
+      <div id="movies1" class="row">	
+      </div>
+    </div>
+    <div class="container">
+      <h5 style="color:grey;font-family:Courier;border-left:100px">Season Changes</h5></div>
+		<hr style="color: grey">
+
+      <div class="container">
+      <div id="movies2" class="row">	
+      </div>
+    </div>
+    <div class="container">
+    <button type="button" class="btn btn-link" onclick="location.href='about.html';">About</button>
+    </div>
+    <script
+  	src="https://code.jquery.com/jquery-3.1.1.min.js"
+  	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  	crossorigin="anonymous"></script>
+  	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  	<script src="js/main.js"></script>
+</body>
+</html>

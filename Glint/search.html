@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GLINT</title>
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body style="/*background-color:black;*/background-image: url('wallpaper.jpg');">
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand" href="index.html" style="color:red;font-size:60px;font-family:Candara;">GLINT</a> -->
+			<a class="navbar-brand" href="index.html">
+				<img src="Logo.png" alt="GLINT" height="65" width="200">
+			</a>
+			</div>
+			<!-- <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+      </li> -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+		</div>
+	</nav>
+	<div class="container">
+		<h5 style="color:grey;font-family:Courier;">Search Results</h5>
+		<hr style="color: grey">
+    </div>
+    <div class="container">
+      <div id="movies3" class="row">	
+      </div>
+      </div>
+    <script
+  	src="https://code.jquery.com/jquery-3.1.1.min.js"
+  	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  	crossorigin="anonymous"></script>
+  	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  	<script src="js/main.js"></script>
+    <script>
+    getSearchResults();
+  </script>
+</body>
+</html>
