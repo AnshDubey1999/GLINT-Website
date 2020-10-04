@@ -157,6 +157,7 @@ function getMovie(){
 	}
 }
 
+// Gets the movie details
 $.ajax(settings).done(function (response) {
 	console.log(response);
 	let movie = response.RESULT;
