@@ -1,3 +1,6 @@
+
+// Gets all new releases using fetch
+
 $(document).ready(() => {
 	var settings = {
 	"async": true,
@@ -24,11 +27,12 @@ $.ajax(settings).done(function (response) {
             </div>
           </div>
         `;
-        //<h6 style="font-family:Courier">${movie.title}</h6>
 	});
 
 	 $('#movies').html(output);
 });
+
+// Gets all expiring soon using fetch
 
 var settings1 = {
 	"async": true,
@@ -59,7 +63,10 @@ $.ajax(settings1).done(function (response) {
 
 	 $('#movies1').html(output1);
 	});
-	var settings2 = {
+
+// Gets all season changes
+
+var settings2 = {
 	"async": true,
 	"crossDomain": true,
 	"url": "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi?q=get%3Aseasons5%3AUS&p=1&t=ns&st=adv",
@@ -97,11 +104,16 @@ $.ajax(settings2).done(function (response) {
 	});
 });
 
+// Gets movies when searched for
+
 function getMovies(searchText){
 	sessionStorage.setItem('searchText1', searchText);
 	window.location = 'search.html';
 	return false;
 }
+
+
+// Requests all the movie details when clicked on view details
 
 function movieSelected(id){
   sessionStorage.setItem('movieId', id);
@@ -157,7 +169,9 @@ function getMovie(){
 	}
 }
 
-// Gets the movie details
+
+// Displays all the movie details on the new screen 
+
 $.ajax(settings).done(function (response) {
 	console.log(response);
 	let movie = response.RESULT;
@@ -172,6 +186,8 @@ $.ajax(settings).done(function (response) {
 	if(movie.imdbinfo.rating == "0"){
 		movie.imdbinfo.rating = 'N/A';
 	}
+	
+	// If imdbinfo not returned by the API, default to N/A
 
 	if(movie.imdbinfo == "notfound"){
 		movie.imdbinfo = {};
